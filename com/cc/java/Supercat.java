@@ -4,15 +4,19 @@ public class Supercat {
  
    private String name;
    private String furColor;
-//    private int age;
+   protected int age;
 
-    public Supercat(String name, String furColor, int age) {
+    protected Supercat(String name, String furColor, int age) {
         this.name = name;
         this.furColor = furColor;
-        // this.age = age;
+        this.age = age;
 	}
 
-    public String getStringAttributes(String flag) {
+    protected String getAge() {
+        return Integer.toString(age);
+    }
+
+    protected String getStringAttributes(String flag) {
         switch (flag) {
             case "#name":
                 return name;
@@ -22,5 +26,4 @@ public class Supercat {
                 return "#!ERROR";
         }
     }
- 
 }

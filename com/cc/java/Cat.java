@@ -1,29 +1,15 @@
 package com.cc.java;
 
-public class Cat {
+public class Cat extends Supercat{
  
-   private String name;
-   private String furColor;
-//    private int age;
-   private int counter;
+    private int counter;
 
-    public Cat(String name, String furColor, int age) {
-    this.name = name;
-    this.furColor = furColor;
+    protected Cat(String name, String furColor, int age, int counter) {
+        super(name, furColor, age);
+        this.counter = counter;
     }
 
-    public String getStringAttributes(String flag) {
-        switch (flag) {
-            case "#name":
-                return name;
-            case "#color":
-                return furColor;
-            default:
-                return "#!ERROR";
-        }
-    }
-
-    public String getAge() {
+    protected String getAge() {
             return checkEscalationLevel(); 
     }
 
@@ -40,5 +26,4 @@ public class Cat {
                 return "1#!?&&%"; 
         }
     }
- 
 }
